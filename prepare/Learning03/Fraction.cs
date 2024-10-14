@@ -19,6 +19,20 @@ public class Fraction{
         numerator = n;
         denominator = d;
     }
+    
+    public int GetTop(){
+        return numerator;
+    }
+    public int GetBottom(){
+        return denominator;
+    }
+    public int SetTop(int n){
+        numerator = n;
+    }
+    public int SetBottom(int d){
+        denominator = d;
+    }
+
     public String GetFractionString(){
         return $"{numerator}/{denominator}";
     }
