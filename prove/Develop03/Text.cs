@@ -49,6 +49,7 @@ public class Text{
 	}
 
 	//a list of the word indicies to blank is input, and the corrosponding words in _words are blanked and that is returned as a string
+	//this is a dumb bandaid fix but i made a text object in this method so i could call returnasblank()
 	public String BlankWords(List<int> b){
 		String c = "";
 		Text t = new Text();
