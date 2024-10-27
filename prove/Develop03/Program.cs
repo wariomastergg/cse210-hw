@@ -1,9 +1,15 @@
 using System;
+using static Menu;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        
+
+        Menu M = new Menu();
+        M.start_menu();
+        
+        
     }
 }
