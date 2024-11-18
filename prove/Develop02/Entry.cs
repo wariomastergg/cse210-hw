@@ -5,12 +5,13 @@ using System.Globalization;
 
 public class Entry{
 
+	// i had to set these variables to these method/attribute things so json could work
 	//data for each entry object
-	public int _day { get; set; }
-	public int _month { get; set; }
-	public int _year { get; set; }
-	public String _answer { get; set; }
-	public int _prompt_index { get; set; }
+	public int Day { get; set; }
+	public int Month { get; set; }
+	public int Year { get; set; }
+	public String Answer { get; set; }
+	public int promptIndex { get; set; }
 	
 	//got these prompts from chatGPT
 	public static List<String> _prompts = new() {
@@ -49,25 +50,25 @@ public class Entry{
 	public void userResponse(){
 		//get the date and save it to int
 		refreshDate();
-		_day = getDay();
-		_month = getMonth();
-		_year = getYear();
+		Day = getDay();
+		Month = getMonth();
+		Year = getYear();
 
 		//choose from the list of prompts
 		Random rand = new Random();
-        _prompt_index = rand.Next(0, _prompts.Count());
+        promptIndex = rand.Next(0, _prompts.Count());
 
         //display prompt and get user input
-        Console.WriteLine(_prompts[_prompt_index]);
+        Console.WriteLine(_prompts[promptIndex]);
         Console.Write("> ");
-        _answer = Console.ReadLine();
+        Answer = Console.ReadLine();
 		
 	}
 
 	//displays info from the entry object
 	public void displayResponse(){
-		Console.WriteLine($"Date: {_month}/{_day}/{_year} - Prompt: {_prompts[_prompt_index]}");
-		Console.WriteLine(_answer);	
+		Console.WriteLine($"Date: {Month}/{Day}/{Year} - Prompt: {_prompts[promptIndex]}");
+		Console.WriteLine(Answer);	
 	}
 
 	//stuff for getting current date
