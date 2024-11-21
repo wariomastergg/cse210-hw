@@ -1,9 +1,21 @@
 using System;
 
+using static Fraction;
+
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning03 World!");
+        Fraction f = new Fraction();
+        Console.WriteLine(f.GetFractionString());
+        Console.WriteLine(f.GetDecimalValue());
+
+         f = new Fraction(8);
+        Console.WriteLine(f.GetFractionString());
+        Console.WriteLine(f.GetDecimalValue());
+
+         f = new Fraction(4, 7);
+        Console.WriteLine(f.GetFractionString());
+        Console.WriteLine(f.GetDecimalValue());
     }
 }
