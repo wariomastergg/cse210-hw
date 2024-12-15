@@ -1,0 +1,6 @@
+0
+kill everyone,murder,50,True,1
+1
+eat food,probably pizza,20,False,2
+2
+fight a dinosaur,t-rex,10,True,3,3,999
