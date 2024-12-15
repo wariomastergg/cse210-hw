@@ -53,11 +53,11 @@ public class Phy{
             shp.applyBounderies();
             
 
-            Raylib.DrawRectangle((int)shp._position.x, (int)shp._position.y, (int)shp._size.x, (int)shp._size.y, Color.Black);
+            Raylib.DrawRectangle((int)shp.Position().x, (int)shp.Position().y, (int)shp.Size().x, (int)shp.Size().y, Color.Black);
             Raylib.DrawLine( 100, 100, ((int)mv.x)+100, ((int)mv.y)+100, Color.Black);
 
             pts.RemoveAt(0);
-            pts.Add(shp._position+(shp._size/2.0));
+            pts.Add(shp.Position()+(shp.Size()/2.0));
             
 
             for (int i = 0; i < amt; i++){

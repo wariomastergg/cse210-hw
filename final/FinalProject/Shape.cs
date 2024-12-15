@@ -5,9 +5,9 @@ using static Vec2;
 
 public class Shape{
 	protected double _mass;
-	public Vec2 _size;	
+	protected Vec2 _size;	
 	protected Vec2 _velocity;
-	public Vec2 _position;
+	protected Vec2 _position;
 	protected Vec2 _gravity;
 	protected double _air_resistance;
 	protected double _framerate;
@@ -30,6 +30,13 @@ public class Shape{
 		_letgo = false;
 		_drag = vec2(0.0);
 		_hold = new(){ vec2(0.0), vec2(0.0),vec2(0.0) };
+	}
+
+	public Vec2 Size(){
+		return _size;
+	}
+	public Vec2 Position(){
+		return _position;
 	}
 
 	public void applyForces(){
