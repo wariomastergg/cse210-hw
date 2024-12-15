@@ -41,7 +41,7 @@ public class Vec2 : Vector{
 		v3.y = v1.y + v2.y ;
 		return v3;
 	}
-
+	
 	//subtract
 	public static Vec2 operator- (Vec2 v1, Vec2 v2){
 		Vec2 v3 = vec2(0.0);
